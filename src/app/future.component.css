@@ -1,0 +1,20 @@
+#container {
+    max-width: 700px;
+    margin: auto;
+}
+h2 {
+    font-size: 3em;
+    color: #BA01FF;
+    font-family: Audiowide;
+    /*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;*/
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+}
+
+@media (max-width: 650px) {
+    #container {
+        width: 100%;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}

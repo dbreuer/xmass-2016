@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+a {
+    line-height: normal;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 13px;
+    color: #A7AAAE;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    border: 1px solid #A7AAAE;
+    padding: 12px 20px 10px 20px;
+    border-radius: 50px;
+    transition: all .1s ease-in-out;
+    text-transform: uppercase;
+    z-index: 5;
+}
+a:hover {
+    background: #A7AAAE;
+    color: #fff;
+}
+.demos {
+    position: absolute;
+    height: 37px;
+    left: 50%;
+    bottom: 20px;
+    z-index: 5;
+    white-space: nowrap;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.demos a {
+    display: inline-block;
+    position: static;
+    left: auto;
+    bottom: auto;
+    border-radius: 0;
+    margin-left: -1px;
+}
+.demos a:first-of-type {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-left: 0;
+}
+.demos a:last-of-type {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Christmas */
+.xmas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: url("/assets/background.jpg") no-repeat 50%/cover;
+}
+.xmas:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(21,8,43,0.2);
+}
+.xmas .xmas-message {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: calc(90% - 6rem);
+    height: calc(100% - 12rem);
+    margin: 0 auto;
+    background: url("/assets/merryxmas.png") no-repeat 50% 50%/contain;
+}
+.xmas #xmas {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 4;
+    pointer-events: none;
+}
