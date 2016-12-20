@@ -1,3 +1,3 @@
 export * from './app.component';
 export * from './app.module';
-export * from './future.component';
+export * from './future/future.component';

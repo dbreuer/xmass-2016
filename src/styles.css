@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css?family=Audiowide&subset=latin-ext');
 html,
 body {
     margin: 0;
@@ -10,10 +10,10 @@ body {
 
 .loading {
     font-size: 3em;
-    color: #BA01FF;
-    font-family: Audiowide;
+    color: #fff;
+    font-family: 'Audiowide', cursive;
     /*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;*/
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    text-shadow: 0 0 30px rgb(34,141,255);
 }
 a {
     line-height: normal;

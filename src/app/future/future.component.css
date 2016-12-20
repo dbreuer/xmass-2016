@@ -1,0 +1,22 @@
+
+#container {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 30px;
+}
+h2 {
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Audiowide', cursive;
+    text-shadow: 0 0 30px rgb(34,141,255);
+}
+
+@media (max-width: 650px) {
+    #container {
+        width: 100%;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+}

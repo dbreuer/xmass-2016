@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {RouterModule} from "@angular/router";
-import {FutureComponent} from "./future.component";
+import {FutureComponent} from "./future/future.component";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
