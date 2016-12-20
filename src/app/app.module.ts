@@ -18,7 +18,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
     FormsModule,
     HttpModule,
       RouterModule.forRoot([
-        { path: ':id', component: FutureComponent},
+        { path: ':lang/:id', component: FutureComponent},
       ])
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],

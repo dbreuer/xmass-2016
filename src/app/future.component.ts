@@ -13,7 +13,11 @@ import {DomSanitizer} from "@angular/platform-browser";
 })
 export class FutureComponent {
     title: string;
-    greeting: string = ", I am a message from the future, and i will tell you that you have a marvelous christmass in 2016, and an awsome year in 2017! Bests, David B.";
+    langSelect: string = 'en-GB';
+    greeting: Object = {
+        "en-GB": ", I am a message from the future, and i have to tell you that you have a marvelous christmas in 2016, and an awesome year in 2017! Bests, David B.",
+        "hu-HU": ", Én egy üzenet vagyok a jövőből, és el kell mondanom, hogy csodálatos karácsonyod lesz 2016-ban, és egy fantasztikus éved 2017-ben! Legjobbakat, Dávid B."
+    };
     fullContent: string;
     type: string = '';
 
@@ -21,19 +25,22 @@ export class FutureComponent {
                   private router: Router,
                     public sanitizer: DomSanitizer) {
         this.title = this.route.snapshot.params['id'];
-        this.fullContent = "Hello " + this.route.snapshot.params['id'] + this.greeting;
+        this.langSelect = this.route.snapshot.params['lang'];
+        this.fullContent = "Hello " + this.title + this.greeting[this.langSelect];
 
         this.speak(this.fullContent);
     }
 
     startType(): void {
         let textToSpeech = this.fullContent.split("");
-        let i = 0;
-        for(let l of textToSpeech) {
-            i++;
-            setTimeout(()=> {
-                this.type += l;
-            }, i * 50);
+        let time = 0;
+        for(let l = 0; l < textToSpeech.length; l++) {
+            time = time + 50;
+            ((time, l) => {
+                setTimeout(()=> {
+                    this.type += textToSpeech[l];
+                }, time);
+            })(time, l);
         }
     }
 
@@ -49,7 +56,7 @@ export class FutureComponent {
     speak(text: string): void {
         var u = new SpeechSynthesisUtterance();
         u.text = text;
-        u.lang = 'en-GB';
+        u.lang = this.langSelect;
 
         window.speechSynthesis.speak(u);
         this.startType()
