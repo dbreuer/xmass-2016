@@ -8,7 +8,8 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "deploy": "cd dist && git add --all && git commit -m \"Release at $(date)\" && git push"
   },
   "private": true,
   "dependencies": {
