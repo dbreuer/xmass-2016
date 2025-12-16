@@ -13,6 +13,7 @@ import { DomSanitizer } from '@angular/platform-browser';
             <p *ngIf="!hasStarted" class="click-to-start">{{ clickToStartText }}</p>
             <h2 [class.done]="isDone" [innerHTML]="type"></h2>
             <a *ngIf="isDone" 
+               (click)="onYouTubeClick($event)"
                href="https://youtu.be/k4KDSwJTJsQ?si=Md5VmcCahliAaHoL&t=0" 
                target="_blank" 
                class="youtube-button">
@@ -125,6 +126,25 @@ export class FutureComponent {
         } catch (error) {
             console.error('Error calling speech synthesis:', error);
             this.startType();
+        }
+    }
+
+    onYouTubeClick(event: Event): void {
+        event.preventDefault();
+
+        // Start fireworks effect
+        if (typeof (window as any).FireworksEffect !== 'undefined') {
+            (window as any).FireworksEffect.start();
+            (window as any).SnowEffect.stop();
+
+            // Stop fireworks after 30 seconds and navigate to YouTube
+            setTimeout(() => {
+                if (typeof (window as any).FireworksEffect !== 'undefined') {
+                    (window as any).FireworksEffect.stop();
+                }
+                // Navigate to YouTube
+                window.location.href = 'https://youtu.be/k4KDSwJTJsQ?si=Md5VmcCahliAaHoL&t=0';
+            }, 10 * 1000);
         }
     }
 }
