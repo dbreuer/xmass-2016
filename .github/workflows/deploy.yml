@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "dist/xmass-2016"
+          path: "dist/xmass-2016/browser"
 
   deploy:
     environment:
