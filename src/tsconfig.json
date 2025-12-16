@@ -4,15 +4,18 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es6", "dom"],
+    "lib": ["ES2022", "dom"],
     "mapRoot": "./",
-    "module": "es6",
-    "moduleResolution": "node",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
-    "target": "es5",
-    "typeRoots": [
-      "../node_modules/@types"
-    ]
+    "target": "ES2022",
+    "useDefineForClassFields": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["../node_modules/@types"]
   }
 }
